@@ -1,0 +1,67 @@
+<html>
+    <!--Memberi judul "Program Kalkulator Sederhana"-->
+    <title>Program Kalkulator Sederhana</title>
+    <!--Menampilkan judul "Program Kalkulator Sederhana" pada halaman HTML-->
+    <h2>Program Kalkulator Sederhana</h2>
+<head> 
+<script language="javascript">
+    // Code fungsi yang bernama tambah() untuk menambahkan 2 bilangan yang telah diinputkan
+    function tambah() {
+        var B1 = parseInt(document.kirim.T1.value)
+        var B2 = parseInt(document.kirim.T2.value)
+        hasil = B1+B2
+        document.kirim.hsl.value = hasil
+    }
+    // Code fungsi yang bernama kurang() untuk mengurangkan 2 bilangan yang telah diinputkan
+    function kurang() {
+        var B1 = parseInt(document.kirim.T1.value)
+        var B2 = parseInt(document.kirim.T2.value)
+        hasil = B1-B2
+        document.kirim.hsl.value = hasil
+    }
+    // Code fungsi yang bernama bagi() untuk membagi 2 bilangan yang telah diinputkan
+    function bagi() {
+        var B1 = parseInt(document.kirim.T1.value)
+        var B2 = parseInt(document.kirim.T2.value)
+        hasil = B1/B2
+        document.kirim.hsl.value = hasil
+    }
+    // Code fungsi yang bernama kali() untuk mengali 2 bilangan yang telah diinputkan
+    function kali() {
+        var B1 = parseInt(document.kirim.T1.value)
+        var B2 = parseInt(document.kirim.T2.value)
+        hasil = B1*B2
+        document.kirim.hsl.value = hasil
+    }
+    // Menuliskan "Dimodifikasi terakhir pada" dan menampilkan tanggal serta jam, menit, dan detik
+    document.write( "Dimodifikasi terakhir pada " + document.lastModified);
+</script>
+
+<body>
+    <!--Form yang akan mengirim bernama kirim-->
+    <form method="POST" name="kirim">
+        <!--Judul "Bilangan 1" bersamaan dengan input text box dengan nama T1-->
+        <p> Bilangan 1
+            <br><br> <input type="text" name="T1" size="20">
+        <!--Judul "Bilangan 2" bersamaan dengan input text box dengan nama T2-->
+        <p>
+            Bilangan 2
+            <br><br><input type="text" name="T2" size="20">
+        </p>
+        </p>
+        <!--Button button untuk menjalankan program kalkulator-->
+        <p> <input type="button" value="+" onclick="tambah()">
+            <input type="button" value="-" onclick="kurang()">
+            <input type="button" value=":" onclick="bagi()">
+            <input type="button" value="x" onclick="kali()">
+        </p>
+        <p>
+        <!--Judul "Hasil" bersamaan dengan text box dengan nama hsl-->
+            Hasil
+            <br><br><input type="text" name="hsl" size="20" onclick=tambah(B1,B2)>
+        </p>
+
+    </form>
+</body>
+</head>
+</html>

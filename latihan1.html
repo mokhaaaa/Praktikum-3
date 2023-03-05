@@ -1,0 +1,50 @@
+<html>
+<!--Memberi judul "Konversi Nilai Angka Ke Nilai Huruf"-->
+<title>Konversi nilai angka ke nilai huruf</title>
+<!--Menampilkan judul "Konversi Nilai Angka ke Nilai Huruf" pada halaman HTML-->
+<h2>Konversi Nilai Angka Ke Nilai Huruf</h2>
+<head> 
+<script language="javascript">
+//Code fungsi yang bernama test() untuk mengkonversi nilai angka yang diinput berdasarkan rentang tertentu
+    function test() {
+        //Mengambil nilai dari input T1 ke form kirim
+        var val1 = document.kirim.T1.value
+        //Rentang batasan konversi nilai angka ke nilai huruf
+        if (val1 >= 0 && val1 <= 40)
+            document.kirim.T2.value = "E"
+        else if (val1 >= 41 && val1 <= 55)
+            document.kirim.T2.value = "D"
+        else if (val1 >= 56 && val1 <= 60)
+            document.kirim.T2.value = "C"
+        else if (val1 >= 61 && val1 <= 65)
+            document.kirim.T2.value = "BC"
+        else if (val1 >= 66 && val1 <= 70)
+            document.kirim.T2.value = "B"
+        else if (val1 >= 71 && val1 <= 80)
+            document.kirim.T2.value = "AB"
+        else if (val1 >= 81 && val1 <= 100)
+            document.kirim.T2.value = "A"
+        else
+            document.kirim.T2.value = "Nilai Tidak Valid"
+    }
+
+</script>
+
+<body>
+    <!--Form yang akan mengirim bernama kirim-->
+    <form method="POST" name="kirim">
+        <!--Judul "Nilai Angka" bersamaan dengan input text box dengan nama T1-->
+        <p> Nilai Angka 
+            <br><br> <input type="text" name="T1" size="20">
+        <!--Judul "Nilai Huruf" bersamaan dengan text box dengan nama T2-->    
+        <p>
+            Nilai Huruf
+            <br><br><input type="text" name="T2" size="20">
+        </p>
+        </p>
+        <!--Button dengan nama B1 untuk mengkonversi dengan menjalankan fungsi test()-->
+        <p><input type="button" value="Konversi" name="B1" onclick=test()> </p>
+    </form>
+</body>
+</head>
+</html>
